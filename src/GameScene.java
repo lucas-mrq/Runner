@@ -40,19 +40,7 @@ public class GameScene extends Scene{
         this.player = new Hero(200,gsY,0,0,6);
         root.getChildren().add(player.getAnimatedView());
 
-
-    /*    root.setOnKeyPressed(new EventHandler<KeyEvent>() { //Code permettant de récupérer l'information d'un appuie de touche
-            @Override
-            public void handle(KeyEvent ke) {
-                System.out.println(ke.getCode());
-                if (ke.getCode() == KeyCode.SPACE) { // Si appuie de la touche SPACE
-                    System.out.println("Jump");
-                    //Hero.jump(); //Permet de sauter
-                }
-            }
-        });*/
-
-        this.setOnKeyPressed( (event)->{
+        /*this.setOnKeyPressed( (event)->{
             System.out.println(event);
             String a = event.getText();
             System.out.println("-"+a+"-");
@@ -61,7 +49,7 @@ public class GameScene extends Scene{
                 //player.jump();
                 System.out.println("OUIIIIII");
             }
-        });
+        });*/
 
         AnimationTimer timer = new AnimationTimer() {
 
