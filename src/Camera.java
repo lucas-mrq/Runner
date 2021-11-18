@@ -23,14 +23,15 @@ public class Camera {
     public double getVX() {
         return vX;
     }
+    public void setVX(double vitesse) {
+        vX = vitesse;
+    }
 
     public void update(double time, double xH){
         if(time>1){time=0;}
         aX = k * (xH-x) - f * vX;
         vX += aX * time;
         x += vX * time;
-
-
     }
 
     @Override

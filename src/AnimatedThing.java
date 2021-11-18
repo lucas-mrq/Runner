@@ -2,15 +2,16 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.util.ArrayList;
+
 public class AnimatedThing {
     private String fileName;
     private Image image;
 
     public static double vX = 100;
     public static double aX = 0;
-    private double y;
-    private double vY = 0;
-    private double aY = 0;
+    public static double vY = 0;
+    public static double aY = 0;
 
     private double indexMax;
 
@@ -18,6 +19,7 @@ public class AnimatedThing {
     private static double attitude =0;
     private static ImageView imgV;
     public static double x;
+    public static double y;
 
     private double duration = 100;
     private double coX = 800;
@@ -30,6 +32,8 @@ public class AnimatedThing {
         this.index = index;
         this.x = x;
         this.vX=vX;
+        this.y = y;
+        this.vY=vY;
         this.indexMax = indexMax;
         image = new Image(fileName);
         this.imgV = new ImageView(image);
@@ -50,13 +54,15 @@ public class AnimatedThing {
         return x;
     }
 
-    public static double getAttitude() {
-        return attitude;
+    public static void setY(double y) {
+        imgV.setY(y);;
     }
 
-    public static void moove(double compt, int i, double newX) {
-        imgV.setX(300+newX);
-        imgV.setViewport(new Rectangle2D(85*i,0,85,100));
-        index=compt;
+    public ArrayList getHitBox(Rectangle2D image){
+        ArrayList liste = new ArrayList<Double>();
+        liste.add(image.getWidth());
+        liste.add(image.getHeight());
+        return liste;
     }
+
 }
