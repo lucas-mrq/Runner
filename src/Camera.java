@@ -1,5 +1,5 @@
 public class Camera {
-    private static double x;
+    private double x;
     private double y;
     private double vX=50;
     private double aX;
@@ -30,8 +30,8 @@ public class Camera {
     public void update(double time, double xH){
         if(time>1){time=0;}
         aX = k * (xH-x) - f * vX;
-        vX += aX * time;
-        x += vX * time;
+        vX += aX * 2*time;
+        x += vX * 2*time;
     }
 
     @Override

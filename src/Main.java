@@ -12,17 +12,19 @@ public class Main extends Application{
 
                 primaryStage.setTitle("Runner");
 
+                primaryStage.setResizable(false);
+
                 Group root = new Group();
 
                 GameScene groupScene = new GameScene(500,250,root,400,800,3);
 
                 primaryStage.setScene(groupScene);
+
                 primaryStage.show();
 
         }
         public static void main(String[] args) {
+
                 launch(args);
-
-
         }
 }
