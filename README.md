@@ -8,6 +8,8 @@ The player has the possibility to save his scores, shoot, jump or play endlessly
 ## Testing tools
 The game starts easily. If the user wants to complicate the game quickly, he/she has the possibility to generate traps by pressing the "c" key or to generate eagles by pressing the "e" key.
 
+Caution: The game is slow until score 22 then after that it continuously generates enemies.
+
 <!-- CONTACT -->
 ## Contact
 
