@@ -1,3 +1,0 @@
-HighScore:
-1e score: 7
-2e score: 6
